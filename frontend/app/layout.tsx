@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Providers from './providers'
+import { headers } from "next/headers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,9 +15,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const trendSlab = localFont({
+  src: "./fonts/TrendSlab.woff",
+  variable: "--font-trendslab",
+  weight: "100 900",
+});
+
 export const metadata: Metadata = {
   title: "ClubVote",
-  description: "web3 voting application",
+  description: "dEcEnTrALiZeD vOtiNg",
 };
 
 export default function RootLayout({
@@ -23,12 +31,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const cookie = headers().get("cookie");
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} ${trendSlab.variable} antialiased`}>
+        <Providers cookie={cookie}>
+          {children}
+        </Providers>
       </body>
     </html>
   );
