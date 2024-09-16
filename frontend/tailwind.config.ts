@@ -9,7 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			trendslab: ['var(--font-trendslab)'],
+		},
   		colors: {
+			salmon: '#ff5055',
+			darkgrey: '#1a1a1a',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
