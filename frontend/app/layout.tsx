@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Oswald } from 'next/font/google'
 import "./globals.css";
 import Providers from './providers'
 import { headers } from "next/headers";
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  variable: "--font-oswald",
+  display: 'swap',
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,8 +42,8 @@ export default function RootLayout({
   const cookie = headers().get("cookie");
 
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${trendSlab.variable} antialiased`}>
+    <html lang="en" className={oswald.className}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${trendSlab.variable} ${oswald.variable} antialiased`}>
         <Providers cookie={cookie}>
           {children}
         </Providers>

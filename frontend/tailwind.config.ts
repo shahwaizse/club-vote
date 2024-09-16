@@ -11,6 +11,7 @@ const config: Config = {
   	extend: {
 		fontFamily: {
 			trendslab: ['var(--font-trendslab)'],
+			oswald: ['var(--font-oswald)'],
 		},
   		colors: {
 			salmon: '#ff5055',

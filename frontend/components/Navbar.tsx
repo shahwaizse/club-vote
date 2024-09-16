@@ -13,7 +13,7 @@ export default function Navbar() {
             ?
             <div>
               {address}
-              <button onClick={() => {disconnect()}}>Disconnect</button>
+              <button className='ml-4 bg-white p-1 rounded-md text-black' onClick={() => {disconnect()}}>Disconnect</button>
             </div>
             :
             <div>

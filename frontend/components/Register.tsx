@@ -2,7 +2,7 @@ import { useWriteContract } from "wagmi";
 import clubvotejson from '@/abi/ClubVote.json'
 
 export default function Register() {
-    const { data: hash, writeContract } = useWriteContract();
+    const { data: hash, isPending, writeContract } = useWriteContract();
 
     function newuser() {
         writeContract({
@@ -14,6 +14,8 @@ export default function Register() {
     }
 
     return (
-        <button onClick={() => {newuser()}}>Create First Club!</button>
+        <button disabled={isPending} className='ml-4 bg-salmon p-1 rounded-md text-black font-oswald text-lg' onClick={() => {newuser()}}>
+            {isPending ? 'creating user...' : 'Register'}
+        </button>
     );
 }
