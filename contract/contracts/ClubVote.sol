@@ -61,6 +61,13 @@ contract ClubVote {
         emit UserRegistered(msg.sender, userName, clubName);
     }
 
+    function getUserInfo() external view returns (string memory, string memory) {
+        string memory username = users[msg.sender].name;
+        address clubAddress = users[msg.sender].clubAddress;
+        string memory clubname = clubs[clubAddress].name;
+        return (username, clubname);
+    }
+
     // user joins club with this function
     function joinClub(address clubAddress) external {
         require(users[msg.sender].clubAddress != clubAddress, "Already a member");
