@@ -13,3 +13,5 @@ export const config = createConfig({
     [sepolia.id]: http("https://eth-sepolia.g.alchemy.com/v2/06jzFfahnS6bevMAVBM3Fn_TW5xM_EYL")
   }
 })
+
+export const contractAddress = "0x9321a45641AE41381167E9A6AD8Ab6Abf1f0D7Cf";

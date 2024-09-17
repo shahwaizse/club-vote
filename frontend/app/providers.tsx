@@ -7,7 +7,7 @@ import React from "react";
 
 const queryClient = new QueryClient();
 
-type Props = {
+interface Props {
     children: React.ReactNode;
     cookie: string | null;
 }
