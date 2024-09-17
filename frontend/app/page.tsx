@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Register from "@/components/Register";
 import WalletCheck from "@/components/WalletCheck";
+import Dashboard from "@/components/home/Dashboard";
 import { LoaderIcon } from "lucide-react";
 import { useReadContract, useAccount } from "wagmi";
 import clubvotejson from '@/abi/ClubVote.json'
@@ -42,7 +43,7 @@ export default function Home() {
                 <LoaderIcon className="animate-spin" /> :
                 <div>
                   {
-                    onboard ? <Register /> : <div>Registered user, display dashboard thingie</div>
+                    onboard ? <Register /> : <Dashboard />
                   }
                 </div>
             }
