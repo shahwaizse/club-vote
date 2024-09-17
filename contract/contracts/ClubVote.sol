@@ -208,4 +208,10 @@ contract ClubVote {
         club.approvedMemberCount--;
     }
 
+    //test function to check contract reads from frontend
+    function testRead() external pure returns (string memory) {
+        string memory myString = "Meow";
+        return myString;
+    }
+
 }
