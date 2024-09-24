@@ -7,7 +7,7 @@ import { Label } from "./ui/label";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { LoaderIcon } from "lucide-react";
-import { contractAddress } from "@/app/config";
+import { contractAddress } from "@/config";
 
 export default function Register() {
 
@@ -24,15 +24,14 @@ export default function Register() {
     }, [isConfirmed]);
 
     const [username, setUsername] = useState<string | null>(null);
-    const [clubname, setClubname] = useState<string | null>(null);
 
     function newuser() {
-        if (username?.trim() && clubname?.trim()) {
+        if (username?.trim()) {
             writeContract({
                 address: contractAddress,
                 abi: clubvotejson.abi,
-                functionName: 'newUser',
-                args: [username, clubname]
+                functionName: 'createUser',
+                args: [username]
             });
         }
         else {
@@ -60,10 +59,6 @@ export default function Register() {
                                 <div>
                                     <Label className="font-oswald text-xl" htmlFor="username">What's your user name?</Label>
                                     <Input className='text-lg bg-black mt-2' id="username" placeholder="Username" onChange={(e) => { setUsername(e.target.value) }} />
-                                </div>
-                                <div>
-                                    <Label className="font-oswald text-xl " htmlFor="clubname">What's your club name?</Label>
-                                    <Input className='text-lg bg-black mt-2' id="clubname" placeholder="Clubname" onChange={(e) => { setClubname(e.target.value) }} />
                                 </div>
                             </div>
                             <Button disabled={isPending} onClick={newuser} className="bg-salmon w-full font-oswald text-xl text-black hover:bg-white">

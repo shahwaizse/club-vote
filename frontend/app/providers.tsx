@@ -2,7 +2,7 @@
 
 import { WagmiProvider, cookieToInitialState } from "wagmi"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { config } from "./config";
+import { config } from "../config";
 import React from "react";
 
 const queryClient = new QueryClient();

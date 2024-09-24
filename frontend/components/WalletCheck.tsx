@@ -1,4 +1,5 @@
 import { useAccount } from "wagmi";
+import { Card } from "./ui/card";
 
 interface Props {
     children: React.ReactNode;
@@ -13,7 +14,7 @@ export default function WalletCheck({ children }: Props) {
             {
                 address ?
                     children :
-                    <div className="grow flex flex-col justify-center items-center font-oswald text-2xl">
+                    <div className="dark grow flex flex-col justify-center items-center font-oswald text-2xl">
                         Connect your Metamask wallet to start using ClubVote 🦊
                     </div>
             }
