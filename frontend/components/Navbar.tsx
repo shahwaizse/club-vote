@@ -2,7 +2,7 @@
 
 import { useAccount, useConnect } from 'wagmi'
 // import { useDisconnect } from 'wagmi'
-import { metaMask } from 'wagmi/connectors'
+import { injected } from 'wagmi/connectors'
 import { Button } from './ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +13,9 @@ export default function Navbar() {
     // const { disconnect } = useDisconnect()
 
     function connectMetamask() {
-        connect({ connector: metaMask() });
+        console.log("function called.");
+        connect({ connector: injected() });
+        console.log("connector called.");
     }
 
     return (
