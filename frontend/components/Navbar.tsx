@@ -36,7 +36,7 @@ export default function Navbar() {
                             <Link href="/">
                                 <div className='font-oswald text-2xl'>Home</div>
                             </Link>
-                            <div className='font-oswald text-2xl'>Your Club</div>
+                            <div className='font-oswald text-2xl'>Votes</div>
                             <div className='font-oswald text-2xl text-green-500'>Connected</div>
                         </div> :
                         <Button className='bg-salmon font-normal font-oswald text-black text-2xl hover:bg-white' onClick={connectMetamask}>
