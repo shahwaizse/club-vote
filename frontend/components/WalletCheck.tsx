@@ -1,5 +1,4 @@
 import { useAccount } from "wagmi";
-import { Card } from "./ui/card";
 
 interface Props {
     children: React.ReactNode;

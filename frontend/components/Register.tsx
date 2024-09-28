@@ -57,7 +57,7 @@ export default function Register() {
                         <div className="flex flex-col justify-center gap-10">
                             <div className="flex flex-col gap-5">
                                 <div>
-                                    <Label className="font-oswald text-xl" htmlFor="username">What's your user name?</Label>
+                                    <Label className="font-oswald text-xl" htmlFor="username">Whats your user name?</Label>
                                     <Input className='text-lg bg-black mt-2' id="username" placeholder="Username" onChange={(e) => { setUsername(e.target.value) }} />
                                 </div>
                             </div>

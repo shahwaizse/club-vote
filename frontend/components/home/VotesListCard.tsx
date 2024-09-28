@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
-import { useReadContract, useAccount } from "wagmi";
+import { useReadContract } from "wagmi";
 import clubvotejson from "@/abi/ClubVote.json"
 import { contractAddress } from "@/config";
 import { CopyIcon } from "lucide-react";
@@ -21,9 +21,7 @@ export default function VotesListCard(props: Props) {
 
     const voteID: string = props.voteID.toString();
 
-    const { address } = useAccount();
-
-    const { data, error, isPending } = useReadContract(
+    const { data, isPending } = useReadContract(
         {
             abi: clubvotejson.abi,
             address: contractAddress,
@@ -32,7 +30,7 @@ export default function VotesListCard(props: Props) {
         }
     );
 
-    const [creator, name, optionsAmount, voteText, voteCount] = data as [string, string, number, string[], number[]] || [];
+    const [, name, , , ] = data as [string, string, number, string[], number[]] || [];
 
     useEffect(() => {
         console.log(data);

@@ -5,17 +5,15 @@ import { useState, useEffect } from "react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
-import { useWriteContract, useAccount, useWaitForTransactionReceipt } from "wagmi";
+import { useWriteContract, useWaitForTransactionReceipt } from "wagmi";
 import { useRouter } from "next/navigation";
 import { LoaderIcon } from "lucide-react";
 import { contractAddress } from "@/config";
 import clubvotejson from '@/abi/ClubVote.json';
 
-export default function Create() {
+export default function CreateCard() {
 
     const router = useRouter();
-
-    const { address } = useAccount();
 
     const { data: hash, isPending, writeContract } = useWriteContract();
     const { isLoading: isConfirming, isSuccess: isConfirmed } =
@@ -55,7 +53,7 @@ export default function Create() {
             });
         }
         else {
-            alert("check if you've filled in vote name and atleast one option");
+            alert("please fill in vote name and atleast one option");
         }
     }
 

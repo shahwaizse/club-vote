@@ -37,9 +37,9 @@ export default function View() {
         // console.log(data);
     }, [data]);
 
-    const [creator, voteName, optionsAmount, voteText, voteCount] = data?.[1].result as [string, string, number, string[], number[]] || [];
+    const [, voteName, , voteText, voteCount] = data?.[1].result as [string, string, number, string[], number[]] || [];
 
-    function getTotalVotes(): BigInt {
+    function getTotalVotes(): bigint {
         let count = BigInt(0);
         voteCount.forEach((num) => {
             count += BigInt(num);

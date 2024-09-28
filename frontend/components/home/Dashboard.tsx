@@ -9,7 +9,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LoaderIcon } from "lucide-react";
 import VotesListCard from "./VotesListCard";
-import { Toaster } from "../ui/sonner";
 
 export default function Dashboard() {
 
@@ -67,7 +66,7 @@ export default function Dashboard() {
                         <div className="grow flex flex-col gap-5 pt-10">
                             {
                                 voteIDs?.length > 0 ?
-                                    voteIDs.map((id, index) => {
+                                    voteIDs.map((id) => {
                                         return <VotesListCard voteID={id} key={id} />
                                     }) :
                                     <div className="grow flex justify-center items-center font-oswald text-xl">

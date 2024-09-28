@@ -9,7 +9,7 @@ import Link from 'next/link'
 export default function Navbar() {
     const { connect } = useConnect()
     const { address } = useAccount()
-    const { disconnect } = useDisconnect()
+    // const { disconnect } = useDisconnect()
 
     function connectMetamask() {
         connect({ connector: metaMask() });

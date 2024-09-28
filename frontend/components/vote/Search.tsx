@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";

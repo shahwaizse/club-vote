@@ -5,7 +5,7 @@ import Register from "@/components/Register";
 import WalletCheck from "@/components/WalletCheck";
 import Dashboard from "@/components/home/Dashboard";
 import { LoaderIcon } from "lucide-react";
-import { type UseReadContractReturnType, useReadContract, useAccount, BaseError } from "wagmi";
+import { useReadContract, useAccount } from "wagmi";
 import clubvotejson from '@/abi/ClubVote.json';
 import { contractAddress } from "@/config";
 import { useState, useEffect } from "react";
@@ -16,7 +16,7 @@ export default function Home() {
 
   const { address, isConnected } = useAccount();
 
-  const { data, error, isPending } = useReadContract({
+  const { data, isPending } = useReadContract({
     abi: clubvotejson.abi,
     account: address,
     address: contractAddress,

@@ -1,30 +1,16 @@
 "use client"
 
 import Navbar from "@/components/Navbar";
-import { useAccount, useReadContract } from "wagmi";
-import clubvotejson from '@/abi/ClubVote.json';
-import { contractAddress } from "@/config";
 import WalletCheck from "@/components/WalletCheck";
-import Create from "@/components/create/Create";
+import CreateCard from "@/components/create/CreateCard";
 
-export default function create() {
-
-    const { address } = useAccount();
-
-    const { data: username, error, isPending } = useReadContract({
-        abi: clubvotejson.abi,
-        account: address,
-        address: contractAddress,
-        functionName: 'getUsername',
-        args: [address]
-    });
-
+export default function Create() {
     return (
         <div className="min-h-screen flex flex-col justify-between bg-[url('../public/background.webp')] bg-cover bg-fixed">
             <Navbar />
             <WalletCheck>
                 <div className="grow flex justify-center items-center">
-                    <Create />
+                    <CreateCard />
                 </div>
             </WalletCheck>
         </div>

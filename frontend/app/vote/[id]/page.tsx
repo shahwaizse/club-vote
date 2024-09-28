@@ -7,7 +7,7 @@ import { useReadContracts, useWriteContract, useAccount, useWaitForTransactionRe
 import clubvotejson from '@/abi/ClubVote.json';
 import { contractAddress } from "@/config";
 import { useEffect, useState } from "react";
-import { Divide, LoaderIcon } from "lucide-react";
+import { LoaderIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { VoteIcon, Users2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,7 @@ export default function Vote() {
             hash,
         });
 
-    const { data, error, isPending } = useReadContracts({
+    const { data, isPending } = useReadContracts({
         contracts: [
             {
                 address: contractAddress,
@@ -64,7 +64,7 @@ export default function Vote() {
         }
     }, [isConfirmed]);
 
-    const [creator, voteName, optionsAmount, voteText, voteCount] = data?.[1].result as [string, string, number, string[], number[]] || [];
+    const [, voteName, , voteText, voteCount] = data?.[1].result as [string, string, number, string[], number[]] || [];
 
     const status = data?.[0].status;
 
