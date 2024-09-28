@@ -60,7 +60,7 @@ export default function Vote() {
 
     useEffect(() => {
         if (isConfirmed) {
-            router.push('/');
+            router.push('/user');
         }
     }, [isConfirmed]);
 
