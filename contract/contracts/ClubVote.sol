@@ -136,4 +136,8 @@ contract ClubVote {
         fetchedVote.hasVoted[msg.sender] = true;
         emit userVoted(_voteID, _optionIndex, msg.sender);
     }
+
+    function voteCheck(uint _voteID, address _addr) external view returns(bool) {
+        return(votes[_voteID].hasVoted[_addr]);
+    }
 }

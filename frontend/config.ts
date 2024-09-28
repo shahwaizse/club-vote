@@ -1,6 +1,11 @@
 import { http, createConfig } from 'wagmi'
 import { sepolia } from 'wagmi/chains'
 import { injected, metaMask } from 'wagmi/connectors'
+import dotenv from 'dotenv'
+
+dotenv.config();
+
+const alchemyApiKey = process.env.ALCHEMY_API_KEY;
 
 export const config = createConfig({
   chains: [sepolia],
@@ -10,8 +15,8 @@ export const config = createConfig({
     metaMask(),
   ],
   transports: {
-    [sepolia.id]: http("https://eth-sepolia.g.alchemy.com/v2/06jzFfahnS6bevMAVBM3Fn_TW5xM_EYL")
+    [sepolia.id]: http(alchemyApiKey)
   }
 })
 
-export const contractAddress = "0xbab77dA389378f303aa85655d849b50aD5F36174";
+export const contractAddress = "0xb0E2B2f1f405d95b66EB52c433c1d003211344fD";
