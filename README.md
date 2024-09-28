@@ -10,7 +10,7 @@ made this to learn evm chain app development.
 
 
 
-## Features
+## Usage/Examples
 
 - here's a vote ID for a vote which decides who the best member of the TMNT is: 
 ```js
