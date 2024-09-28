@@ -12,6 +12,9 @@ made this to learn evm chain app development.
 
 ## Usage/Examples
 
+- you need the MetaMask wallet extension to use this app 🦊
+- grab some sepolia testnet tokens from google's [faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- you can view all the backend events for this app on [etherscan](https://sepolia.etherscan.io/)
 - here's a vote ID for a vote which decides who the best member of the TMNT is: 
 ```js
 49012122111194688057374043567767395038231870179919494587228416568323058161735
