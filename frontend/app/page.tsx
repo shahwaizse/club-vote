@@ -14,7 +14,7 @@ export default function Home() {
 
   const [onboard, setOnboard] = useState<boolean>(true);
 
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
 
   const { data, error, isPending } = useReadContract({
     abi: clubvotejson.abi,
@@ -23,9 +23,9 @@ export default function Home() {
     functionName: 'checkUser',
   });
 
-  useEffect(() => {
-    console.log(error);
-  }, [error]);
+  // useEffect(() => {
+  //   console.log(error);
+  // }, [error]);
 
   useEffect(() => {
     if (data == true) {
@@ -33,9 +33,15 @@ export default function Home() {
     }
   }, [data]);
 
+  useEffect(() => {
+    if(isConnected == true && onboard == false) {
+      window.location.reload();
+    }
+  }, [isConnected]);
+
   return (
     <>
-      <div className="flex flex-col justify-between min-h-screen bg-[url('../public/background.webp')] bg-cover">
+      <div className="flex flex-col justify-between min-h-screen bg-[url('../public/background.webp')] bg-fixed bg-cover">
         <Navbar />
         <WalletCheck>
           <div className="grow flex justify-center items-center">

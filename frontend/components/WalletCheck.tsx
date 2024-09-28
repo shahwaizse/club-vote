@@ -14,8 +14,8 @@ export default function WalletCheck({ children }: Props) {
             {
                 address ?
                     children :
-                    <div className="dark grow flex flex-col justify-center items-center font-oswald text-2xl">
-                        Connect your Metamask wallet to start using ClubVote 🦊
+                    <div className="dark grow flex justify-center items-center font-oswald text-2xl gap-2">
+                        Connect your Metamask wallet to start using ClubVote <div className="text-3xl animate-bounce">🦊</div>
                     </div>
             }
         </>

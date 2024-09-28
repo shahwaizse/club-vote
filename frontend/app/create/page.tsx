@@ -20,7 +20,7 @@ export default function create() {
     });
 
     return (
-        <div className="min-h-screen flex flex-col justify-between bg-[url('../public/background.webp')] bg-cover">
+        <div className="min-h-screen flex flex-col justify-between bg-[url('../public/background.webp')] bg-cover bg-fixed">
             <Navbar />
             <WalletCheck>
                 <div className="grow flex justify-center items-center">
