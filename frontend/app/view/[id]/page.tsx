@@ -16,7 +16,7 @@ export default function View() {
     const { address } = useAccount();
     const { id } = useParams();
 
-    const { data, error, isPending } = useReadContracts({
+    const { data, isPending } = useReadContracts({
         contracts: [
             {
                 address: contractAddress,

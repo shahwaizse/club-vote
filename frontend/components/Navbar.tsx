@@ -1,6 +1,7 @@
 "use client"
 
-import { useAccount, useDisconnect, useConnect } from 'wagmi'
+import { useAccount, useConnect } from 'wagmi'
+// import { useDisconnect } from 'wagmi'
 import { metaMask } from 'wagmi/connectors'
 import { Button } from './ui/button'
 import Image from 'next/image'

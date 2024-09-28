@@ -16,7 +16,7 @@ export default function Dashboard() {
     const [username, setUsername] = useState<string>("");
     const [voteIDs, setVoteIDs] = useState<number[]>([]);
 
-    const { data, error, isPending } = useReadContracts({
+    const { data, isPending } = useReadContracts({
         contracts: [
             {
                 abi: clubvotejson.abi,
@@ -70,7 +70,7 @@ export default function Dashboard() {
                                         return <VotesListCard voteID={id} key={id} />
                                     }) :
                                     <div className="grow flex justify-center items-center font-oswald text-xl">
-                                        You haven't created any votes yet.
+                                        You havent created any votes yet.
                                     </div>
                             }
                         </div>

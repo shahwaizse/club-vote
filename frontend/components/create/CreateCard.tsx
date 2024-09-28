@@ -107,7 +107,7 @@ export default function CreateCard() {
                                                 </Card>
                                             }) :
                                             <div className="font-oswald text-xl grow flex justify-center items-center">
-                                                You haven't added any options yet.
+                                                You havent added any options yet.
                                             </div>
                                     }
                                 </div>
