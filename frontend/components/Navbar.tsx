@@ -22,13 +22,15 @@ export default function Navbar() {
         <>
             <div className='flex flex-row justify-between items-center py-1 px-2 bg-darkgrey'>
                 <div>
-                    <Image
-                        className='rounded-xl'
-                        src="/nav.png"
-                        width={50}
-                        height={50}
-                        alt='Nav Icon'
-                    />
+                    <Link href="/">
+                        <Image
+                            className='rounded-xl'
+                            src="/nav.png"
+                            width={50}
+                            height={50}
+                            alt='Nav Icon'
+                        />
+                    </Link>
                 </div>
                 {
                     address ?
