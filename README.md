@@ -6,7 +6,8 @@ made this to learn evm chain app development.
 
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![clubvote-transparent](https://github.com/user-attachments/assets/fb75cf4e-f486-4a50-80f9-c9bde9c5ac9f)
+
 
 
 ## Features
@@ -26,7 +27,14 @@ made this to learn evm chain app development.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![1](https://github.com/user-attachments/assets/afdbe78e-112e-4c0f-9351-dda4d3297375)
+![2](https://github.com/user-attachments/assets/51b5124d-70f9-496f-9cfa-570112b84b07)
+![3](https://github.com/user-attachments/assets/c3ffab78-073b-4fce-a437-344c1964808d)
+![4](https://github.com/user-attachments/assets/56a3d6b6-3b49-4674-b139-4db99b9f7a27)
+
+
+
+
 
 
 ## Roadmap
