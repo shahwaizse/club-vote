@@ -87,7 +87,7 @@ export default function Vote() {
                                                 </div>
                                             </div>
                                             <div className="font-oswald text-2xl grow flex justify-center items-center">
-                                                No vote exists on that id.
+                                                No vote exists on that id. (Nice try buckaroo 🤡)
                                             </div>
                                         </Card> :
                                         <Card className="rounded-lg w-[80vw] min-h-[60vh] dark p-5 flex flex-col">
