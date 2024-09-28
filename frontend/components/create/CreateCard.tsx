@@ -23,7 +23,7 @@ export default function CreateCard() {
 
     useEffect(() => {
         if (isConfirmed) {
-            router.push("/");
+            router.push("/user");
         }
     }, [isConfirmed]);
 
