@@ -8,6 +8,7 @@ import clubvotejson from "@/abi/ClubVote.json"
 import { contractAddress } from "@/config";
 import { CopyIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Skeleton } from "../ui/skeleton";
 
 interface Props {
     voteID: number,
@@ -51,7 +52,9 @@ export default function VotesListCard(props: Props) {
 
     return (
         <Card className="dark p-5 bg-black text-white flex flex-row justify-between">
-            <div className="text-xl font-oswald">{name}</div>
+            {
+                isPending ? <Skeleton className="p-5 w-20" /> : <div className="text-xl font-oswald">{name}</div>
+            }
             <div className="flex flex-row gap-5">
                 <Button onClick={copyID} className="text-xl font-oswald text-white bg-black hover:bg-black">
                     {copyText == "ID copied" ? copyText : <CopyIcon className="ml-5" />}
