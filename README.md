@@ -6,9 +6,15 @@ made this to learn evm chain app development.
 
 
 
-![Logo](https://github.com/user-attachments/assets/d250b4f2-bb7b-4d8a-9e4f-a3d204bb4162)
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
+## Features
+
+- here's a vote ID for a vote which decides who the best member of the TMNT is: 
+```js
+49012122111194688057374043567767395038231870179919494587228416568323058161735
+```
 
 ## Features
 
@@ -20,14 +26,7 @@ made this to learn evm chain app development.
 
 ## Screenshots
 
-![1](https://github.com/user-attachments/assets/8e0faf0a-f582-484a-b404-a17f5cf705ed)
-![2](https://github.com/user-attachments/assets/1e9d8338-760d-4626-91fe-dc583d92cd90)
-![3](https://github.com/user-attachments/assets/390fa09a-1a6a-4dbb-ab7d-9ca9d4b75a99)
-![4](https://github.com/user-attachments/assets/02c6ae7c-d9c8-46fa-ae33-d1ecf5d65af7)
-
-
-
-
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 ## Roadmap
