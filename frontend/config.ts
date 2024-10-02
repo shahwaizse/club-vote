@@ -1,6 +1,7 @@
 import { http, createConfig } from 'wagmi'
 import { sepolia } from 'wagmi/chains'
-import { injected, metaMask } from 'wagmi/connectors'
+import { metaMask } from 'wagmi/connectors'
+// import { injected } from 'wagmi/connectors'
 import dotenv from 'dotenv'
 
 dotenv.config();
@@ -11,7 +12,7 @@ export const config = createConfig({
   chains: [sepolia],
   ssr: true,
   connectors: [
-    injected(),
+    // injected(),
     metaMask(),
   ],
   transports: {
