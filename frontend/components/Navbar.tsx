@@ -14,7 +14,7 @@ export default function Navbar() {
 
     function connectMetamask() {
         console.log("function called.");
-        connect({ connector: metaMask() });
+        connect({ connector: metaMask({injectProvider: true}) });
         console.log("connector called.");
     }
 
