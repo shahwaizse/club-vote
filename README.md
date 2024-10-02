@@ -47,7 +47,7 @@ made this to learn evm chain app development.
 - something like https://zkpass.org/ would allow clubs to automatically approve members becuase then each member would be verifiably unique, removing the need for manual approval.
 
 
-## Acknowledgements
+## Helpful Stuff
 
  - [This awesome tutorial for integrating Wagmi with NextJS App Router](https://dev.to/danmugh/integrating-wagmi-v2-and-rainbowkit-in-nextjs-a-comprehensive-guide-part-1-37ck)
  - [My Notion page that kept me organized](https://shahwaizse.notion.site/ClubVote-24ed09659a574756b3b8e16205bad5bc?pvs=4)
