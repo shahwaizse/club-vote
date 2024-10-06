@@ -50,5 +50,4 @@ made this to learn evm chain app development.
 ## Helpful Stuff
 
  - [This awesome tutorial for integrating Wagmi with NextJS App Router](https://dev.to/danmugh/integrating-wagmi-v2-and-rainbowkit-in-nextjs-a-comprehensive-guide-part-1-37ck)
- - [My Notion page that kept me organized](https://shahwaizse.notion.site/ClubVote-24ed09659a574756b3b8e16205bad5bc?pvs=4)
 
