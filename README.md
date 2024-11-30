@@ -14,7 +14,7 @@ made this to learn evm chain app development.
 
 - you need the MetaMask wallet extension to use this app 🦊
 - grab some sepolia testnet tokens from google's [faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
-- you can view all the backend events for this app on [etherscan](https://sepolia.etherscan.io/address/0xb0E2B2f1f405d95b66EB52c433c1d003211344fD)
+- you can view all the backend events for this app on [etherscan](https://etherscan.io/address/0x47d49B8DC77c69d8c34e8bFdF3037879fB0b708B)
 - here's a vote ID for a vote which decides who the best member of the TMNT is: 
 ```js
 49012122111194688057374043567767395038231870179919494587228416568323058161735
@@ -41,8 +41,6 @@ made this to learn evm chain app development.
 
 
 ## Roadmap
-
-- clubs functionality so one dude can't make 3000 metamask wallets and skew the votes (club head will have to approve people before they can vote)
 
 - something like https://zkpass.org/ would allow clubs to automatically approve members becuase then each member would be verifiably unique, removing the need for manual approval.
 
